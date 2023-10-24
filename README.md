@@ -1,7 +1,9 @@
-# CONCORD_ISSTA23
-Code for ISSTA'23 paper "CONCORD: Clone-aware Contrastive Learning for Source Code"
+# CSC712 Final Project
+CSC 712 Fall 2023 Project: Clone and Runtime Aware Contrastive Learning for Source Code \
+Final Report: https://www.overleaf.com/read/mndqpnnjzyhb#0d2a82
 
-## Environment Setup
+
+## Concord Environment Setup
 ```bash
 conda create -n concord Python=3.8.12;
 conda activate concord;
