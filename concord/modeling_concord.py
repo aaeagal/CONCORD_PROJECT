@@ -41,6 +41,13 @@ BertLayerNorm = torch.nn.LayerNorm
 class ConcordTreePredictionHead(nn.Module):
     def __init__(self, config):
         super().__init__()
+        #Had to add these config attributes, this is a novice hack
+        config.tree_vocab_size=928
+        config.temp=0.05
+        config.emb_pooler_type="cls"
+        config.mlm_weight=1.0
+        config.clr_weight=1.0
+        config.tree_pred_weight=0.1
         self.transform = BertPredictionHeadTransform(config)
         self.decoder = nn.Linear(config.hidden_size, config.tree_vocab_size, bias=False)
         self.bias = nn.Parameter(torch.zeros(config.tree_vocab_size))

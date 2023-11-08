@@ -262,7 +262,7 @@ def main():
             "You are instantiating a new tokenizer from scratch. This is not supported, but you can do it from another script, save it,"
             "and load it from here, using --tokenizer_name"
         )
-    logger.info("DEBUG: Tokenizer: %s, dict size = %d, mask token = %s,  cls token = %s, pad token = %s", tokenizer.__class__.__name__, len(tokenizer.vocab), tokenizer.mask_token, tokenizer.cls_token, tokenizer.pad_token)
+    logger.info("DEBUG: Tokenizer: %s, dict size = %d, mask token = %s,  cls token = %s, pad token = %s", tokenizer.__class__.__name__, tokenizer.vocab_size, tokenizer.mask_token, tokenizer.cls_token, tokenizer.pad_token)
 
     if model_args.model_name_or_path:
         model = ConcordForContrastivePreTraining.from_pretrained(
